@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "projects": {
+    "palmas": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "disc/palmas",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+            "aot": true,
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+            ],
+            "scripts": [
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "palmas:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "palmas:build:production"
+            }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
+        }
+      }
+    }
+  },
+  "defaultProject": "palmas"
+}

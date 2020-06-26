@@ -1,0 +1,26 @@
+
+<h1>Contacto</h1>
+<div>
+  <p class="blog-card">
+    Tu opinión es muy importante para nosotros!
+    Si tienes duda, pregunta o proposicio para cooperación - puedes usar formulario para contactar nosotros.
+    Muchar gracias!
+  </p>
+</div>
+<form class="cf">
+  <div class="half left cf form-group">
+    <input formControlName="name"  type="text"  placeholder="Nombre">
+    <input formControlName="email" type="email" id="input-email" placeholder="Correo electronico">
+    <input type="text" id="input-subject" placeholder="El tema">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Mensaje"></textarea>
+  </div>
+
+</form>
+<form>
+  <div class="button-subm form-group">
+    <input  (click)="refresh()" type="submit" value="Submit" id="input-submit">
+  </div>
+</form>
+
