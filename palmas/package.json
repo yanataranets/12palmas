@@ -38,7 +38,7 @@
     "ng2-carouselamos": "^4.1.0",
     "ngx-bootstrap": "^5.6.1",
     "rxjs": "^6.5.5",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "zone.js": "^0.10.3"
   },
   "devDependencies": {
